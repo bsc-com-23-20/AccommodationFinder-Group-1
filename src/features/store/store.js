@@ -2,9 +2,11 @@ import { configureStore } from '@reduxjs/toolkit';
 import landlordLoginSlice from '../loginFeature/landlordLoginSlice';
 import postNewRoomSlice from '../postNewRoom/postNewRoomSlice';
 
+console.log('within store');
+ 
 const store = configureStore({
   reducer: {
-    landLogin: landlordLoginSlice,
+    landlordLoginInfo: landlordLoginSlice,
     uploadRoom: postNewRoomSlice,
   },
 });

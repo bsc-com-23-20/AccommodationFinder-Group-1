@@ -21,9 +21,12 @@ const ProfilePage = () => {
     .then((res) => {
       const landlordData = res.data;
       const { landlord } = landlordData;
-      console.log(landlord[0]);
+      //console.log(landlord[0]);
       //console.log(JSON.stringify(landlordData));
-      dispatch(landlordLogin(landlordData));
+      // console.log(landlord[0]);
+      const { firstname, lastname, email, phonenumber } = landlord[0];
+      console.log({ firstname, lastname, email, phonenumber });
+      dispatch(landlordLogin({ firstname, lastname, email, phonenumber }));
       console.log('Inside GET request of ProfilePage component');
       // console.log(res.data);
     })
