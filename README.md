@@ -1,1 +1,1 @@
-# AccomodationFinder-Group-1
+# AccommodationFinder-Group-1
