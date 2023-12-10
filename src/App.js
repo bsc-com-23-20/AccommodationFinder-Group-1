@@ -23,7 +23,7 @@ function App() {
     return (
       <div>
         <Navbar />
-        <Counter />
+        {/* <Counter /> */}
         {/* <div style ={{display: "Flex"}}>
           <Leftbar/> 
           <Outlet/>
