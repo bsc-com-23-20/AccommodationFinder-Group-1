@@ -4,7 +4,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import React from 'react';
 
-function ViewHostel() {
+const ViewHostel = () => {
   return (
     <section className='view-hostel-container'>
       <div className='head-section'>
@@ -16,18 +16,18 @@ function ViewHostel() {
           <p className='hostel'>PETITE HOSTEL </p>
         </div>
         <div className='room-card'>
-          <p className='room-type'>single</p>
+          <p className='room-type'>single room</p>
           <div className='picture-holder'>
             <img className='room-picture' src={Room1} alt='room-1'></img>
           </div>
           <div className='price-book-holder'>
-            <p className='price'>MK2000</p>
+            <p className='price'>MK20000</p>
             <button className='book-btn'>book</button>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default ViewHostel;
