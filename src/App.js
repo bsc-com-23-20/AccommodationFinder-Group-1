@@ -15,6 +15,7 @@ import Profile from './pages/profile/Profile';
 //import AuthContext from "./components/context/authContext";
 import useContext from 'react';
 import Counter from './components/counter/Counter';
+import ViewHostel from './pages/viewHostel/ViewHostel';
 
 function App() {
   const currentUser = true;
@@ -24,6 +25,7 @@ function App() {
       <div>
         <Navbar />
         {/* <Counter /> */}
+        <ViewHostel />
         {/* <div style ={{display: "Flex"}}>
           <Leftbar/> 
           <Outlet/>

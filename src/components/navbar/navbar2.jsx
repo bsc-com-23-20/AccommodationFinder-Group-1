@@ -1,4 +1,4 @@
-import './navbarstyles.css';
+import "./"
 import { Component } from 'react';
 import { MenuItems } from "./menuitem";
 import { Link } from 'react-router-dom';
