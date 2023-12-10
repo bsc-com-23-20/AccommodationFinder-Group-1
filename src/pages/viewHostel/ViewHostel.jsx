@@ -68,23 +68,25 @@ const ViewHostel = () => {
           <p className='hostel'>PETITE HOSTEL </p>
         </div>
 
-        <div className='rooms-cards'>
-          {room.map((room) => (
-            <div className='room-card' key={room.id}>
-              <p className='room-type'>{room.roomType}</p>
-              <div className='picture-holder'>
-                <img
-                  className='room-picture'
-                  src={room.roomPicture}
-                  alt='room-1'
-                ></img>
+        <div className='cards-holder'>
+          <div className='rooms-cards'>
+            {room.map((room) => (
+              <div className='room-card' key={room.id}>
+                <p className='room-type'>{room.roomType}</p>
+                <div className='picture-holder'>
+                  <img
+                    className='room-picture'
+                    src={room.roomPicture}
+                    alt='room-1'
+                  ></img>
+                </div>
+                <div className='price-book-holder'>
+                  <p className='price'>{room.roomPrice}</p>
+                  <button className='book-btn'>book</button>
+                </div>
               </div>
-              <div className='price-book-holder'>
-                <p className='price'>{room.roomPrice}</p>
-                <button className='book-btn'>book</button>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* <div className='room-card'>
