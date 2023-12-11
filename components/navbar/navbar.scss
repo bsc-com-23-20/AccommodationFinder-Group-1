@@ -1,0 +1,114 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    height: 20px;
+    border: 1px solid lightgray;
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+
+        }
+
+        span{
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(26, 34, 46,);
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            padding: 5px;
+
+            input{
+                border: none;
+                width: 500px;
+            }
+        }
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .user{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 500px;
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+
+            }
+            
+            span{
+                font-weight: bolder;
+                color: rgb(26, 34, 46,);
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px){
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: whitesmoke;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: -100%;
+    opacity: 0;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+    border-radius: 13px;
+}
+
+.navbar.active{
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-left{
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem o;
+}
+.navbar{
+    display: block;
+    cursor: pointer;
+}
+
+.menu-icons i{
+    font-size: 1.2rem;
+    color: green;
+}
+
+}
