@@ -16,6 +16,7 @@ import Profile from './pages/profile/Profile';
 import useContext from 'react';
 import Counter from './components/counter/Counter';
 import ViewHostel from './pages/viewHostel/ViewHostel';
+import ConfirmBooking from './pages/confirmBooking/ConfirmBooking';
 
 function App() {
   const currentUser = true;
@@ -25,7 +26,8 @@ function App() {
       <div>
         <Navbar />
         {/* <Counter /> */}
-        <ViewHostel />
+        {/* <ViewHostel /> */}
+        <ConfirmBooking />
         {/* <div style ={{display: "Flex"}}>
           <Leftbar/> 
           <Outlet/>
