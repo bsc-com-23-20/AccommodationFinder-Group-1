@@ -12,7 +12,7 @@ const ConfirmBooking = () => {
       id: nanoid(),
       name: 'user',
       phoneNumber: '0992787820',
-      email: 'johnbanda@gmail.com',
+      email: 'testbanda@gmail.com',
       photo: photo_geoff,
       transaction_id: Transactio_ID,
     },
@@ -52,7 +52,7 @@ const ConfirmBooking = () => {
       id: nanoid(),
       name: 'user',
       phoneNumber: '0992787820',
-      email: 'johnbanda@gmail.com',
+      email: 'billnbanda@gmail.com',
       photo: photo_geoff,
       transaction_id: Transactio_ID,
     },
@@ -157,33 +157,35 @@ const ConfirmBooking = () => {
       <div className='line-break'></div>
 
       <section className='user-data-container '>
-        {prospectiveTenant.map((user) => (
-          <main>
-            <div className='top'>
-              <div className='profile-pic-container'>
-                <img
-                  className='profile-pic'
-                  src={photo_geoff}
-                  alt='student_photo'
-                />
-              </div>
-              <div className='name-container'>
-                <p>{user.name}</p>
-                <p>{user.email}</p>
-                <p>{user.phoneNumber}</p>
-              </div>
-              <div className='trans-id-container'>
-                <div className='trans-id-here'>
-                  <img src={Transactio_ID} alt='' />
+        {prospectiveTenant.map((user) => {
+          return (
+            <main key={user.id}>
+              <div className='top'>
+                <div className='profile-pic-container'>
+                  <img
+                    className='profile-pic'
+                    src={photo_geoff}
+                    alt='student_photo'
+                  />
+                </div>
+                <div className='name-container'>
+                  <p>{user.name}</p>
+                  <p>{user.email}</p>
+                  <p>{user.phoneNumber}</p>
+                </div>
+                <div className='trans-id-container'>
+                  <div className='trans-id-here'>
+                    <img src={Transactio_ID} alt='' />
+                  </div>
+                </div>
+                <div className='btn-container'>
+                  <button className='confirm-btn'>confirm</button>
+                  <button className='cancel-btn'>decline</button>
                 </div>
               </div>
-              <div className='btn-container'>
-                <button className='confirm-btn'>confirm</button>
-                <button className='cancel-btn'>decline</button>
-              </div>
-            </div>
-          </main>
-        ))}
+            </main>
+          );
+        })}
       </section>
     </section>
   );
