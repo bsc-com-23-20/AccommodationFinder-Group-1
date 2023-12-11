@@ -31,7 +31,7 @@ function App() {
         <Home />
         <BoxInWords />
         {/* <Counter /> */}
-        {/* <ConfirmBooking /> */}
+        <ConfirmBooking />
         {/* <ViewHostel /> */}
         {/* <div style ={{display: "Flex"}}>
           <Leftbar/> 
@@ -73,7 +73,8 @@ function App() {
 
     {
       path: '/BookingPage',
-      element: <BookingPage />,
+      // element: <BookingPage />,
+      element: <ConfirmBooking />,
     },
 
     {
