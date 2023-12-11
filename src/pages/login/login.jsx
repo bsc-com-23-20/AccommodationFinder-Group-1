@@ -8,11 +8,6 @@ const Login = () => {
             <div className="card">
                 <div className="left">
                     <h1>WELCOME TO ACCOFINDER.</h1>
-                    <p>
-                        whatever the website does will be written here. 
-                        Trust me this is a working website 
-                        and you are going to enjoy it
-                    </p>
                     <span>Don't you have an account?</span>
                     <Link to = '/register'>
                     <button>Register</button>

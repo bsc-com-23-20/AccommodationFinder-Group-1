@@ -6,7 +6,7 @@
   font-size: 10px;
   background-color: #ffffffa4;
 }
-header {
+.header {
   position: absolute;
   left: 0;
   width: 100%;
@@ -18,11 +18,11 @@ header {
   /* border: 1px solid crimson; */
   margin-left: 1rem;
 }
-header {
+.header {
   display: flex;
   align-items: center;
 }
-header p {
+.header p {
   position: absolute;
   left: 31rem;
   font-size: 2rem;

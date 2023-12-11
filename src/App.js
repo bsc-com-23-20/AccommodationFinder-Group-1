@@ -1,3 +1,4 @@
+import './App.css';
 import Login from './pages/login/login';
 import Register from './pages/register/register';
 import * as ReactDOM from 'react-dom/client';
@@ -7,14 +8,16 @@ import {
   Outlet,
   Navigate,
 } from 'react-router-dom';
-import Navbar from './components/navbar/navbar';
+import Navbar2 from './components/navbar/navbar2';
 import Rightbar from './components/rightbar/rightbar';
 import Leftbar from './components/leftbar/leftbar';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 //import AuthContext from "./components/context/authContext";
 import useContext from 'react';
-import Counter from './components/counter/Counter';
+import BoxInWords from './components/boxwords/boxinwords';
+import BookingPage from './pages/bookingPage/bookingPage';
+// import Counter from './components/counter/Counter';
 import ViewHostel from './pages/viewHostel/ViewHostel';
 import ConfirmBooking from './pages/confirmBooking/ConfirmBooking';
 
@@ -24,10 +27,12 @@ function App() {
   const Layout = () => {
     return (
       <div>
-        <Navbar />
+        <Navbar2 />
+        <Home />
+        <BoxInWords />
         {/* <Counter /> */}
+        {/* <ConfirmBooking /> */}
         {/* <ViewHostel /> */}
-        <ConfirmBooking />
         {/* <div style ={{display: "Flex"}}>
           <Leftbar/> 
           <Outlet/>
@@ -64,6 +69,11 @@ function App() {
           element: <Profile />,
         },
       ],
+    },
+
+    {
+      path: '/BookingPage',
+      element: <BookingPage />,
     },
 
     {

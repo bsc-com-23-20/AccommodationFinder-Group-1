@@ -7,23 +7,24 @@ import './ConfirmBooking.css';
 import { nanoid } from '@reduxjs/toolkit';
 
 const ConfirmBooking = () => {
-  //   const [prospectiveTenant, setProspectiveTenant] = useState([
-  //     {
-  //       id: nanoid(),
-  //       name: 'user',
-  //       phoneNumber: '0992787820',
-  //       email: 'johnbanda@gmail.com',
-  //       photo: photo_geoff,
-  //       transaction_id: Transactio_ID,
-  //     },
-  //     {
-  //       id: nanoid(),
-  //       name: 'user',
-  //       phoneNumber: '0992787820',
-  //       email: 'johnbanda@gmail.com',
-  //       photo: photo_geoff,
-  //       transaction_id: Transactio_ID,
-  //     },
+  const [prospectiveTenant, setProspectiveTenant] = useState([
+    {
+      id: nanoid(),
+      name: 'user',
+      phoneNumber: '0992787820',
+      email: 'johnbanda@gmail.com',
+      photo: photo_geoff,
+      transaction_id: Transactio_ID,
+    },
+    {
+      id: nanoid(),
+      name: 'user',
+      phoneNumber: '0992787820',
+      email: 'johnbanda@gmail.com',
+      photo: photo_geoff,
+      transaction_id: Transactio_ID,
+    },
+  ]);
   //     {
   //       id: nanoid(),
   //       name: 'user',
@@ -115,7 +116,7 @@ const ConfirmBooking = () => {
   //   ]);
   return (
     <section className='confirm-booking-container'>
-      <header>
+      <header className='header'>
         <div className='back-icon'>
           <ArrowBack />
         </div>
@@ -123,7 +124,9 @@ const ConfirmBooking = () => {
       </header>
       <div className='line-break'></div>
 
-      <main>
+      
+
+      {/* <main>
         <div className='top'>
           <div className='profile-pic-container'>
             <img
@@ -139,15 +142,15 @@ const ConfirmBooking = () => {
           </div>
           <div className='trans-id-container'>
             <div className='trans-id-here'>
-                <img src={Transactio_ID} alt="" />
+              <img src={Transactio_ID} alt='' />
             </div>
           </div>
           <div className='btn-container'>
             <button className='confirm-btn'>confirm</button>
-            <button className='cancel-btn'>cancel</button>
+            <button className='cancel-btn'>decline</button>
           </div>
         </div>
-      </main>
+      </main> */}
     </section>
   );
 };
