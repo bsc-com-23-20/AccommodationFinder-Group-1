@@ -1,5 +1,6 @@
 import ArrowBack from '@mui/icons-material/ArrowBack';
 import React from 'react';
+import photo_geoff from './images/geoff.jpg';
 
 import './ConfirmBooking.css';
 
@@ -12,17 +13,22 @@ const ConfirmBooking = () => {
         </div>
         <p>confirm booking</p>
       </header>
-      <br className='line-break' />
+
       <main>
         <div className='top'>
           <div className='profile-pic-container'>
-            <img className='profile-pic' src='' alt='' />
+            <img className='profile-pic' src={photo_geoff} alt='' />
           </div>
           <div className='name-container'>
             <p>student name</p>
           </div>
         </div>
       </main>
+      <div className='trans-id-container'>
+        <div className='trans-id-here'>
+          <img src='' alt='' />
+        </div>
+      </div>
     </section>
   );
 };
