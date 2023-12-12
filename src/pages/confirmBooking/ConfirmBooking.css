@@ -69,7 +69,7 @@ main {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
-  /* border: 1px solid #131212a4; */
+  border: 1px solid #131212a4;
 }
 .name-container {
   position: absolute;
