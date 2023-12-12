@@ -20,6 +20,7 @@ import BookingPage from './pages/bookingPage/bookingPage';
 // import Counter from './components/counter/Counter';
 import ViewHostel from './pages/viewHostel/ViewHostel';
 import ConfirmBooking from './pages/confirmBooking/ConfirmBooking';
+import PostPage from './pages/postingpage/postingPage';
 
 function App() {
   const currentUser = true;
@@ -31,7 +32,8 @@ function App() {
         <Home />
         <BoxInWords />
         {/* <Counter /> */}
-        <ConfirmBooking />
+        {/* <ConfirmBooking /> */}
+        {/* <PostPage/> */}
         {/* <ViewHostel /> */}
         {/* <div style ={{display: "Flex"}}>
           <Leftbar/> 
@@ -84,6 +86,11 @@ function App() {
     {
       path: '/viewHostel',
       element: <ViewHostel/>,
+    },
+
+    {
+      path:'/postPage',
+      element: <PostPage/>,
     },
 
     {
