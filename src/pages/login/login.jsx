@@ -1,29 +1,35 @@
-import './login.scss';
-import { Link } from 'react-router-dom';
-import LogFun from '../functions/logfun';
+import "./login.scss"
+import { Link } from "react-router-dom"
+import logo from "../../images/accofinder.png"
+import LogDB from "../functions/lofundb";
 
 const Login = () => {
-  return (
-    <div className='login'>
-      <div className='card'>
-        <div className='left'>
-          <h1>WELCOME TO ACCOFINDER.</h1>
-          <span>Don't you have an account?</span>
-          <Link to='/register'>
-            <button>Register</button>
-          </Link>
-        </div>
-        <div className='right'>
-          <h1>Login</h1>
-          <form>
-            <LogFun />
-            <span>forgot password?</span>
-            <Link to='./'>click here</Link>
-          </form>
-        </div>
-      </div>
-    </div>
-  );
-};
+    return (
+        <div className="login">
+            <div className="card">
+                <div className="left">
+                    <img src={logo} alt="logo" />
+                    <h1>WELCOME TO ACCOFINDER.</h1>
+                    <span>Don't you have an account?</span>
+                    <Link to = '/register'>
+                    <button>Register</button>
+                    </Link>
+                    
 
-export default Login;
+                </div>
+                <div className="right">
+                    <form>
+                        <LogDB/>
+                        <span>forgot password?
+                        <Link to ='./'>
+                        click here
+                        </Link>
+                        </span>
+                    </form>
+                </div>
+            </div>
+            </div>
+    )
+}
+
+export default Login

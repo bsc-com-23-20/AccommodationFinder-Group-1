@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function LogDB() {
-  const [username, setUsername] = useState('');
+  const [Email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleRegister = async () => {
@@ -11,7 +11,7 @@ function LogDB() {
         headers: {
           'Content-Type': 'LogDBlication/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ Email, password }),
       });
 
       const data = await response.json();
@@ -28,7 +28,7 @@ function LogDB() {
         headers: {
           'Content-Type': 'LogDBlication/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ Email, password }),
       });
 
       const data = await response.json();
@@ -40,17 +40,16 @@ function LogDB() {
 
   return (
     <div>
-      <h1>Login/Register Page</h1>
+      <h1>Login</h1>
       <div>
-        <label>Username:</label>
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <label>Email:</label>
+        <input type="text" value={Email} onChange={(e) => setEmail(e.target.value)} />
       </div>
       <div>
         <label>Password:</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </div>
       <div>
-        <button onClick={handleRegister}>Register</button>
         <button onClick={handleLogin}>Login</button>
       </div>
     </div>

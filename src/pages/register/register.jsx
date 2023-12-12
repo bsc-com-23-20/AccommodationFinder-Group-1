@@ -1,18 +1,16 @@
 import "./register.scss";
 import { Link } from "react-router-dom";
-import  LogFun  from "../functions/logfun";
+import RegDB from "../functions/regfun";
+import logo from "../../images/accofinder.png"
+
 
 const Register = () => {
     return (
         <div className="register">
             <div className="card">
                 <div className="left">
+                    <img src={logo} alt="logo" />
                     <h1>ACCOFINDER.</h1>
-                    <p>
-                        whatever the website does will be written here. 
-                        Trust me this is a working website 
-                        and you are going to enjoy it
-                    </p>
                     <span>Do you have an account?</span>
                     <Link to = '/login'>
                     <button>Login</button>
@@ -20,18 +18,12 @@ const Register = () => {
 
                 </div>
                 <div className="right">
-                    <h1>Register</h1>
-                    <form>
-                        <LogFun/>
-                        <input type="text" placeholder="Email/number"/>
-                        <span className='select'>Student</span>
-                        <span className='select'>Landlord</span>
-                        <span className = 'select'>Estate Egent</span>
-                    </form>
+                        <RegDB/>
                 </div>
             </div>
             </div>
     )
 }
+
 
 export default Register

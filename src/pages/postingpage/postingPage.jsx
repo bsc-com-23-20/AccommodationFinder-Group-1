@@ -1,4 +1,4 @@
-// PostForm.js
+
 import React, { useState } from 'react';
 
 const PostForm = ({ onPostSubmit }) => {
@@ -9,14 +9,14 @@ const PostForm = ({ onPostSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create a post object
+
     const newPost = {
       imageUrl,
       price,
       location,
       hostelName,
     };
-    // Pass the post object to the parent component for further processing
+  
     onPostSubmit(newPost);
   };
 

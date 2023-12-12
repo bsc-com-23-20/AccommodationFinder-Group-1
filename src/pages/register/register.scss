@@ -16,13 +16,20 @@
 
         .left{
             flex: 1;
-            background: linear-gradient(rgba(26, 34, 46, 0.5), rgba(39, 25, 46, 0.5)), url("../../images/drone.jpg") center;
+            background: linear-gradient(rgba(26, 34, 46, 0.5), rgba(39, 25, 46, 0.5)), url("../../images/boy.jpeg") center;
             background-size: cover;
             padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 30px;
             color: white;
+            align-items: center;
+
+            img{
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
            
             h1{
                 font-size: 40px;
@@ -40,7 +47,7 @@
                 font-size: 14px;
             }
             button{
-                width: 50%;
+                width: 80px;
                 padding: 10px;
                 bottom: none;
                 background-color: #fff;
@@ -65,24 +72,20 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 80px;
             justify-content: center;
 
             h1{
                 color: #555;
             }
-            form{
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
 
                 input{
                     border: none;
                     border-bottom: 1px solid lightgray;
-                    padding: 30px 20px;
+                    padding: 5px 70px;
                 }
                 button{
-                    width: 50%;
+                    width: 30%;
                     padding: 10px;
                     border: none;
                     background-color: #443bf1;
@@ -101,7 +104,25 @@
                 .select{
                     display: flex;
                 }
-            }
+            
         }
     }
+}
+
+@media screen and (max-width: 850px) {
+
+    .register{
+        height: inherit;
+    }
+
+    .card{
+        width: 50%;
+        border-radius: 10px;
+        background-color: white;
+        min-height: 50%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    
 }

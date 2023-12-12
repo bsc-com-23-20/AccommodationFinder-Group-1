@@ -20,7 +20,6 @@ const BookingPage = () => {
         
     <div>
         <NavBar/>
-        
       {pictures.map(picture => (
         <div key={picture.id} className="picture-card">
           <img src={picture.imageUrl} alt={`Posted by ${picture.hostelName}`} />
