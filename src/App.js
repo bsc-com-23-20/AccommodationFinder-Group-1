@@ -81,6 +81,10 @@ function App() {
       path: '/login',
       element: <Login />,
     },
+    {
+      path: '/viewHostel',
+      element: <ViewHostel/>,
+    },
 
     {
       path: '/register',

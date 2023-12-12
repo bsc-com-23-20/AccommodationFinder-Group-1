@@ -1,3 +1,30 @@
+// .login {
+//   width: 100%;
+//   height: 90vh;
+//   border: 1px solid crimson;
+//   font-size: 10px;
+// }
+// .card {
+//   position: relative;
+//   display: flex;
+// }
+// .left {
+//   order: 2;
+//   position: absolute;
+//   top: 10rem;
+//   left: 60%;
+// }
+// .right {
+//   order: 1;
+//   position: absolute;
+//   top: 1rem;
+//   left: 18%;
+//   width: 30rem;
+//   height: 30rem;
+//   background-color: sandybrown;
+//   border: 1px solid sandybrown;
+// }
+
 .login{
     height: 100vh;
     background-color: rgb(222, 240, 249);
@@ -22,7 +49,7 @@
             flex-direction: column;
             gap: 30px;
             color: white;
-           
+
             h1{
                 font-size: 40px;
                 line-height: 40px;
