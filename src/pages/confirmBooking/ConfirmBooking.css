@@ -1,9 +1,10 @@
 .confirm-booking-container {
+  display: flex;
+  flex-direction: row;
   position: relative;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  position: relative;
   font-size: 10px;
   background-color: #ffffffa4;
 }
@@ -152,7 +153,8 @@ main {
   width: 100%;
   height: 40rem;
   border: 2px solid #db9715;
-
+  display: flex;
+  flex-direction: row;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-rows: repeat(2, 1fr); */

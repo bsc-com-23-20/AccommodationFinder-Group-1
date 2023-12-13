@@ -50,7 +50,7 @@ const LogFun = () => {
             onChange={(e) => setPassword(e.target.value)} />
         </div>
         {isRegistered ? (
-          <button onClick={handleLogin}>Login</button>
+          <button  type='submit' onClick={handleLogin}>Login</button>
         ) : (
           <button onClick={handleRegister}>Register</button>
         )}
