@@ -34,25 +34,20 @@ function RegDB() {
           <h1>Register</h1>
         
           <div className='insider'>
-            <label>First Name:</label>
-            <input type="text"  placeHolder="e.g Kondwani" value={FirstName} onChange={(e) => setFirstName(e.target.value)} />
+            <input type="text"  placeHolder="First Name" value={FirstName} onChange={(e) => setFirstName(e.target.value)} />
           </div>
           <div className='insider'>
-            <label>Last Name:</label>
-            <input type="text" placeHolder="e.g Kachikuni" value={LastName} onChange={(e) => setLastName(e.target.value)} />
+            <input type="text" placeHolder="Last Name" value={LastName} onChange={(e) => setLastName(e.target.value)} />
           </div>
 
           <div className='insider'>
-            <label>PhoneNumber:</label>
-            <input type="text" placeHolder="e.g 0888000111" value={PhoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+            <input type="text" placeHolder="PhoneNumber" value={PhoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
           </div>
           <div className='insider'>
-            <label>Email:</label>
-            <input type="text" placeHolder="e.g example@me.com" value={Email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="text" placeHolder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className='insider'>
-            <label>Password:</label>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input type="password"  placeHolder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           
           <div className='insider'>

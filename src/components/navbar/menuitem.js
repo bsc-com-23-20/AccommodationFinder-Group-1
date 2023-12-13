@@ -33,4 +33,11 @@ export const MenuItems = [
     cName : "Nav-Links",
     icon : "fa-solid fa-address-book"
 },
+
+{
+    title : "PROFILE",
+    Url : "/profile/:id",
+    cName : "Nav-Links",
+    icon : "fa-solid fa-address-book"
+},
 ]

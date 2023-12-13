@@ -20,7 +20,11 @@ import BookingPage from "./pages/bookingPage/bookingPage";
 import LogFun from "./pages/functions/logfun";
 import PostPage from "./pages/postingpage/postPage";
 import PostForm from "./pages/postingpage/postingPage";
-import Footer from "./pages/footer/Footer"
+import Footer from "./pages/footer/Footer";
+import ProfilePage from "./pages/profilePage/profilePage";
+import ProfileForm from "./pages/profilePage/ProfileForm";
+import PopupMessage from "./pages/status/mainComponents";
+
 
 function App() {
 
@@ -67,10 +71,6 @@ function App() {
         element: <Home/>,
       },
 
-      {
-        path: "/profile/:id",
-        element: <Profile/>,
-      }
     ]
     },
 
@@ -85,8 +85,23 @@ function App() {
     },
 
     {
+      path: "/profile/:id",
+      element: <ProfilePage/>,
+    },
+
+    {
       path: "/Register",
       element: <Register/>,
+    },
+
+    {
+      path: "/profile/:id/editprofile",
+      element: <ProfileForm/>,
+    },
+
+    {
+      path: "/profile/:id/status",
+      element: <PopupMessage/>,
     },
 
     {

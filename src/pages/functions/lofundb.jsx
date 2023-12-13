@@ -44,12 +44,10 @@ function LogDB() {
       <h1>Login</h1>
       <div className='insider'>
       <div className='itemholders'>
-        <label>Email:</label>
-        <input type="text" value={Email} onChange={(e) => setEmail(e.target.value)} />
+        <input type="text" placeHolder='Email' value={Email} onChange={(e) => setEmail(e.target.value)} />
       </div>
       <div className ='itemholders'>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input type="password" placeHolder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
       </div>
       </div>
 

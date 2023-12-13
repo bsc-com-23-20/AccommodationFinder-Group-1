@@ -7,6 +7,7 @@ import img3 from "../../images/boy.jpeg";
 import React, { useState, useEffect } from 'react';
 import Dropdown from "../functions/dropdowngender";
 import DropDownLocation from "../functions/dropdownlocation";
+import GenderDropdown from "../functions/dropdowngender";
 
 
 const Home = () => {
@@ -54,7 +55,7 @@ const Home = () => {
             <label htmlFor="gender">
               Select your gender
             </label>
-              <Dropdown/>
+              <GenderDropdown/>
             </div>
             <div className="filters">
             <label htmlFor="filters">
