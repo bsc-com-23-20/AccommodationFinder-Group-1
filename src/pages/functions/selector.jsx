@@ -1,46 +1,46 @@
 import React, { useState } from 'react';
-import './logdb.scss'
+import './logdb.scss';
 
 const Selector = () => {
   const [selectedItem, setselected] = useState('');
-
+  const [accType, setAccType] = useState('');
   const handleSelect = (event) => {
     setselected(event.target.value);
   };
 
   return (
-    <div className='select'>
+    <form className='select'>
       <label className='radiobtw'>
         <input
-          type="radio"
-          value="Student"
+          type='radio'
+          value='Student'
           checked={selectedItem === 'Student'}
-          onChange={handleSelect}
+          onChange={(event) => setAccType(event.target.value)}
         />
         Student
       </label>
 
       <label className='radiobtw'>
         <input
-          type="radio"
-          value="Landlord"
+          type='radio'
+          value='Landlord'
           checked={selectedItem === 'Landlord'}
-          onChange={handleSelect}
+          onChange={(event) => setAccType(event.target.value)}
         />
         Landlord
       </label>
 
       <label className='radiobtw'>
         <input
-          type="radio"
-          value="Estate agency"
+          type='radio'
+          value='Estate agency'
           checked={selectedItem === 'Estate agency'}
-          onChange={handleSelect}
+          onChange={(event) => setAccType(event.target.value)}
         />
         Estate Agency
       </label>
       <p>Selected: {selectedItem}</p>
-    </div>
+    </form>
   );
 };
 
