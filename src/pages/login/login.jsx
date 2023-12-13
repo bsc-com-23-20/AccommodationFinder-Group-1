@@ -4,6 +4,7 @@ import logo from "../../images/accofinder.png"
 import LogDB from "../functions/lofundb";
 
 const Login = () => {
+    
     return (
         <div className="login">
             <div className="card">
