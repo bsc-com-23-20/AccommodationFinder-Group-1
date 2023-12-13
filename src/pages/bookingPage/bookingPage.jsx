@@ -1,37 +1,47 @@
-import NavBar from "../../components/navbar/navbar"
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
-const BookingPage = () => {
-  const [pictures, setPictures] = useState([]);
+import React, { useState } from 'react';
+import './HostelInfo.scss';
+import Navbar from '../../components/navbar/navbar';
 
-  useEffect(() => {
-    // Replace 'YOUR_API_ENDPOINT' with your actual API endpoint
-    axios.get('YOUR_API_ENDPOINT')
-      .then(response => {
-        setPictures(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
+const HostelInfo = ({ hostelData }) => {
+  const [showRooms, setShowRooms] = useState(false);
+
+  const handleShowRooms = () => {
+    setShowRooms(!showRooms);
+  };
+
+  if (!hostelData) {
+    return <div>
+      <Navbar/>
+      No hostel data available
+      </div>;
+  }
 
   return (
-        
-    <div>
-        <NavBar/>
-      {pictures.map(picture => (
-        <div key={picture.id} className="picture-card">
-          <img src={picture.imageUrl} alt={`Posted by ${picture.hostelName}`} />
-          <div className="details">
-            <h2>{picture.hostelName}</h2>
-            <p>Location: {picture.location}</p>
-            <p>Price: ${picture.price}</p>
-          </div>
+    <div className="hostel-info">
+      <Navbar/>
+      <div className="hostel-details">
+        <h2>{hostelData.name}</h2>
+        <p>Location: {hostelData.location}</p>
+        <p>Number of Rooms: {hostelData.numRooms}</p>
+        <p>Price Range: {hostelData.priceRange}</p>
+        <p>Landlord Name: {hostelData.landlordName}</p>
+        <button onClick={handleShowRooms}>Show Rooms</button>
+      </div>
+
+      {showRooms && (
+        <div className="rooms-list">
+          {hostelData.rooms.map((room) => (
+            <div key={room.id} className="room-item">
+              <p>{room.name}</p>
+              <p>{room.location}</p>
+              <p>{room.Price}</p>
+            </div>
+          ))}
         </div>
-      ))}
+      )}
     </div>
   );
 };
 
-export default BookingPage;
+export default HostelInfo;
