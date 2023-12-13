@@ -10,10 +10,11 @@ const Login = () => {
                 <div className="left">
                     <img src={logo} alt="logo" />
                     <h1>WELCOME TO ACCOFINDER.</h1>
-                    <span>Don't you have an account?</span>
+                    <span>Don't you have an account?
                     <Link to = '/register'>
                     <button>Register</button>
                     </Link>
+                    </span>
                     
 
                 </div>

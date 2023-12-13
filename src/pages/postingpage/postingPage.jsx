@@ -1,12 +1,7 @@
 
 import React, { useState } from 'react';
-
-const PostPage = () => {
-  const [posts, setPosts] = useState([]);
-
-  const handlePostSubmit = (newPost) => {
-    setPosts([...posts, newPost]);
-  };
+import ImageUpload from '../../components/upload/imageUpload';
+import DropDownLocation from '../functions/dropdownlocation';
 
         const PostForm = ({ onPostSubmit }) => {
           const [imageUrl, setImageUrl] = useState('');
@@ -27,12 +22,26 @@ const PostPage = () => {
             onPostSubmit(newPost);
           };
 
-    return (
-      <div className="trial">
-        see this
-      </div>
-    );
-  }
-}
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+      <ImageUpload/>
+      </label>
+      <label>
+        Price:
+        <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
+      </label>
+      <label>
+        Location:
+        <DropDownLocation value ={location} onChange={(e) => setLocation(e.target.value)}/>
+      </label>
+      <label>
+        Hostel Name:
+        <input type="text" value={hostelName} onChange={(e) => setHostelName(e.target.value)} />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
 
-export default PostPage;
+export default PostForm

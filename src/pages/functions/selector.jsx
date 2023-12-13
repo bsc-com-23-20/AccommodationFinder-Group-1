@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import './logdb.scss'
 
 const Selector = () => {
-  const [selectedGender, setselected] = useState('');
+  const [selectedItem, setselected] = useState('');
 
   const handleSelect = (event) => {
     setselected(event.target.value);
@@ -9,31 +10,31 @@ const Selector = () => {
 
   return (
     <div className='select'>
-      <label>
+      <label className='radiobtw'>
         <input
           type="radio"
           value="Student"
-          checked={selectedGender === 'Student'}
+          checked={selectedItem === 'Student'}
           onChange={handleSelect}
         />
         Student
       </label>
 
-      <label>
+      <label className='radiobtw'>
         <input
           type="radio"
           value="Landlord"
-          checked={selectedGender === 'Landlord'}
+          checked={selectedItem === 'Landlord'}
           onChange={handleSelect}
         />
         Landlord
       </label>
 
-      <label>
+      <label className='radiobtw'>
         <input
           type="radio"
           value="Estate agency"
-          checked={selectedGender === 'Estate agency'}
+          checked={selectedItem === 'Estate agency'}
           onChange={handleSelect}
         />
         Estate Agency

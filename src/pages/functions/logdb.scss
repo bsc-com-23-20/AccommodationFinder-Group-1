@@ -1,0 +1,30 @@
+.items{
+    padding: 1rem;
+    gap: 0.1rem;
+    display: flex;
+    flex-direction: column;
+
+    .insider{
+        display: flex;
+        flex-direction: column;
+
+        .itemholders{
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+        }
+    }
+
+    .select{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .radiobtw{
+            display: flex;
+            gap: 1rem
+        
+        }
+    }
+
+}

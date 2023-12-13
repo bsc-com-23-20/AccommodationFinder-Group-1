@@ -1,15 +1,18 @@
 import React from 'react'
 import "./boxwords.scss"
+import { useHistory } from 'react-router-dom';
 
 function BoxInWords() {
+    
+
   return (
     <div className="boxMain">
         <div className="box1">
             <div className="heading">
-                Apply for housing
+                Find a home
             </div>
             <p className="paragraph">
-                housing for singles, doubles and triples
+                Housing for singles, doubles and triples
             </p>
         </div>
         <div className="box1">
@@ -18,9 +21,8 @@ function BoxInWords() {
                      Add Hostel
                 </div>
                 <p className="paragraph">
-                    add your hostel here
+                    Just add your hostel. Accofinder will do the marketing
                 </p>
-                <button>here</button>
         </div>
 
             <div className="box1">
@@ -28,13 +30,13 @@ function BoxInWords() {
                     Login here
                 </div>
                 <p className="paragraph">
-                    create account with Accofinder to book or upload your place
+                    Create account with Accofinder to book or upload your place
                 </p>
-                <button></button>
             </div>
         
     </div>
   )
+        
 }
 
 export default BoxInWords

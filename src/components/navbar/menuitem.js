@@ -29,7 +29,7 @@ export const MenuItems = [
 
 {
     title : "START POSTING",
-    Url : "/postPage",
+    Url : "/PostPage",
     cName : "Nav-Links",
     icon : "fa-solid fa-address-book"
 },
