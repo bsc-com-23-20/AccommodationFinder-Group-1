@@ -8,6 +8,9 @@ const PostPage = () => {
     const handlePostSubmit = (newPost) => {
       setPosts([...posts, newPost]);
     };
+
+    
+
   
     return (
       <div>
@@ -16,7 +19,7 @@ const PostPage = () => {
         <div>
           {posts.map((post, index) => (
             <div key={index}>
-              <img src={post.imageUrl} alt={`Hostel ${index + 1}`} style={{ maxWidth: '100%' }} />
+              <img src={post.image} alt={`Hostel ${index + 1}`} style={{ maxWidth: '100%' }} />
               <p>Price: {post.price}</p>
               <p>Location: {post.location}</p>
               <p>Hostel Name: {post.hostelName}</p>

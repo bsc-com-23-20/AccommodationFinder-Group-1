@@ -39,6 +39,7 @@ const Selector = () => {
         />
         Estate Agency
       </label>
+      <p>Selected: {selectedItem}</p>
     </div>
   );
 };

@@ -14,14 +14,17 @@ import Leftbar from './components/leftbar/leftbar';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 //import AuthContext from "./components/context/authContext";
-import useContext from 'react';
-import BoxInWords from './components/boxwords/boxinwords';
-import BookingPage from './pages/bookingPage/bookingPage';
-import LogFun from './pages/functions/logfun';
-import PostPage from './pages/postingpage/postPage';
-import PostForm from './pages/postingpage/postingPage';
-import Footer from './pages/footer/Footer';
-import ViewHostel from './pages/viewHostel/ViewHostel';
+import useContext from "react";
+import BoxInWords from "./components/boxwords/boxinwords";
+import BookingPage from "./pages/bookingPage/bookingPage";
+import LogFun from "./pages/functions/logfun";
+import PostPage from "./pages/postingpage/postPage";
+import PostForm from "./pages/postingpage/postingPage";
+import Footer from "./pages/footer/Footer";
+import ProfilePage from "./pages/profilePage/profilePage";
+import ProfileForm from "./pages/profilePage/ProfileForm";
+import PopupMessage from "./pages/status/mainComponents";
+
 
 function App() {
   const currentUser = true;
@@ -64,11 +67,7 @@ function App() {
           element: <Home />,
         },
 
-        {
-          path: '/profile/:id',
-          element: <Profile />,
-        },
-      ],
+    ]
     },
 
     {
@@ -82,17 +81,28 @@ function App() {
     },
 
     {
-      path: '/Register',
-      element: <Register />,
+      path: "/profile/:id",
+      element: <ProfilePage/>,
     },
 
     {
-      path: '/PostPage',
-      element: <PostPage />,
+      path: "/Register",
+      element: <Register/>,
     },
+
     {
-      path: '/viewHostel',
-      element: <ViewHostel />,
+      path: "/profile/:id/editprofile",
+      element: <ProfileForm/>,
+    },
+
+    {
+      path: "/profile/:id/status",
+      element: <PopupMessage/>,
+    },
+
+    {
+      path: "/PostPage",
+      element: <PostPage/>,
     },
   ]);
 

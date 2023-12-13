@@ -1,71 +1,48 @@
 import React, { useState } from 'react';
+import ProfileForm from './ProfileForm';
+import ProfileDisplay from './profileDisplay';
+import './profile.scss'
+import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
-  const [profileName, setProfileName] = useState('John Doe');
-  const [profilePicture, setProfilePicture] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('')
+  const [profileData, setProfileData] = useState({
+    image: '',
+    phoneNumber: '',
+    email: '',
+  });
 
-  const handleNameChange = (e) => {
-    setProfileName(e.target.value);
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/profile/:id/editprofile');
   };
 
-  const handleNumberChange = (e) => {
-    setPhoneNumber(e.target.value);
+  const handleStatusClick = () => {
+    navigate('/profile/:id/status');
   };
-  const handlePictureChange = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
 
-    reader.onloadend = () => {
-      setProfilePicture(reader.result);
-    };
-
-    if (file) {
-      reader.readAsDataURL(file);
-    }
+  const handleProfileUpdate = (updatedProfileData) => {
+    setProfileData(updatedProfileData);
   };
 
   return (
-    <div>
-      <h1>Profile Page</h1>
-      
+    <div className='profile-page '>
       <div>
-        <h2>Edit Profile</h2>
-        <label>
-          Profile Name:
-          <input type="text" value={profileName} onChange={handleNameChange} />
-        </label>
-
-        <label>
-          Profile Name:
-          <input type="text" value={PhoneNumber} onChange={handleNumberChange} />
-        </label>
-
-        <label>
-          Profile Picture:
-          <input type="file" accept="image/*" onChange={handlePictureChange} />
-        </label>
-
-        {profilePicture && (
+        <button onClick={handleButtonClick}>edit profile</button>
+      </div>
+      <div>
+          <h1>Profile Page</h1>
           <div>
-            <h3>Preview:</h3>
-            <img src={profilePicture} alt="Profile Preview" style={{ maxWidth: '100%', maxHeight: '200px' }} />
+            <ProfileDisplay profileData={profileData} />
           </div>
-        )}
-
-        <button onClick={() => alert('Profile Updated!')}>
-          Update Profile
-        </button>
       </div>
-
       <div>
-        <h2>Profile Information</h2>
-        {profilePicture && <img src={profilePicture} alt="Profile" style={{ maxWidth: '100%', maxHeight: '200px' }} />}
-        <p>Name: {profileName}</p>
-        <p>PhoneNumber: {PhoneNumber}</p>
+        <button onClick={handleStatusClick}>Status</button>
       </div>
+      
     </div>
   );
 };
 
 export default ProfilePage;
+

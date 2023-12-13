@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 
-const Dropdown = () => {
+const GenderDropdown = () => {
+  // State to manage the selected gender
   const [selectedGender, setSelectedGender] = useState('');
 
-  const handleGenderChange = (event) => {
-    setSelectedGender(event.target.value);
+  // Function to handle changes in the dropdown selection
+  const handleGenderChange = (e) => {
+    setSelectedGender(e.target.value);
   };
 
   return (
     <div>
-      <label>
-        <select value={selectedGender} onChange={handleGenderChange}>
-          <option value="">Select...</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-      </label>
+      <select id="gender" value={selectedGender} onChange={handleGenderChange}>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      {selectedGender && <p>You selected: {selectedGender}</p>}
     </div>
   );
 };
 
-export default Dropdown;
+export default GenderDropdown;

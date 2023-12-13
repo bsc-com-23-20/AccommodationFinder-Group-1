@@ -20,6 +20,9 @@ const DropDownLocation = () => {
           <option value="Economics Bridge">Economics Bridge</option>
         </select>
       </label>
+      <div>
+      {selectedLocation && <p>{selectedLocation}</p>}
+      </div>
     </div>
   );
 };
