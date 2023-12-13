@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className = "navbar">
             <div className="left">
             <img src={AFlogo} alt="logo" />
-                <HomeOutlinedIcon/>
+                <HomeOutlinedIcon className="icon"/>
                 {/* <GridViewOutlinedIcon/> */}
             
             <div className="search">
@@ -23,9 +23,9 @@ const Navbar = () => {
             </div>
             </div>
             <div className="right">
-                <PersornOutlinedIcon/>
-                <EmailOutlinedIcon/>
-                <NotificationsOutlinedIcon/>
+                <PersornOutlinedIcon className="icon"/>
+                <EmailOutlinedIcon className="icon"/>
+                <NotificationsOutlinedIcon className="icon"/>
                 <div className="user">
                    <img src={profileicon} alt="profile pic" />
                     <span>Kondwa K-sli</span>

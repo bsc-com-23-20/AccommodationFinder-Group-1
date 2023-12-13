@@ -1,5 +1,7 @@
 
 import React, { useState } from 'react';
+import ImageUpload from '../../components/upload/imageUpload';
+import DropDownLocation from '../functions/dropdownlocation';
 
 const PostForm = ({ onPostSubmit }) => {
   const [imageUrl, setImageUrl] = useState('');
@@ -23,8 +25,7 @@ const PostForm = ({ onPostSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Image URL:
-        <input type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} />
+      <ImageUpload/>
       </label>
       <label>
         Price:
@@ -32,7 +33,7 @@ const PostForm = ({ onPostSubmit }) => {
       </label>
       <label>
         Location:
-        <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
+        <DropDownLocation value ={location} onChange={(e) => setLocation(e.target.value)}/>
       </label>
       <label>
         Hostel Name:
@@ -43,31 +44,4 @@ const PostForm = ({ onPostSubmit }) => {
   );
 };
 
-export default PostForm;
-
-const PostPage = () => {
-  const [posts, setPosts] = useState([]);
-
-  const handlePostSubmit = (newPost) => {
-    setPosts([...posts, newPost]);
-  };
-
-  return (
-    <div>
-      <h1>Hostel Postings</h1>
-      <PostForm onPostSubmit={handlePostSubmit} />
-      <div>
-        {posts.map((post, index) => (
-          <div key={index}>
-            <img src={post.imageUrl} alt={`Hostel ${index + 1}`} style={{ maxWidth: '100%' }} />
-            <p>Price: {post.price}</p>
-            <p>Location: {post.location}</p>
-            <p>Hostel Name: {post.hostelName}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default PostPage;
+export default PostForm

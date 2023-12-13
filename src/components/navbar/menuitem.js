@@ -26,4 +26,11 @@ export const MenuItems = [
     cName : "Nav-Links",
     icon : "fa-solid fa-address-book"
 },
+
+{
+    title : "START POSTING",
+    Url : "/PostPage",
+    cName : "Nav-Links",
+    icon : "fa-solid fa-address-book"
+},
 ]

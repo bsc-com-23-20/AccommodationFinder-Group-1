@@ -1,9 +1,11 @@
 import NavBar from "../../components/navbar/navbar"
+import PostPage from "../bookingPage/bookingPage"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const BookingPage = () => {
   const [pictures, setPictures] = useState([]);
+  
 
   useEffect(() => {
     // Replace 'YOUR_API_ENDPOINT' with your actual API endpoint
