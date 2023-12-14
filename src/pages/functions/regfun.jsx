@@ -15,7 +15,7 @@ function RegDB() {
   const [accType, setAccType] = useState('');
   const [selectedItem, setselected] = useState('');
 
-  const handleRegister = async () => {
+  const handleRegister = (event) => {
     if (accType === 'Student') {
       axios
         .post('http://localhost:8000/api/students/register', {
@@ -25,7 +25,9 @@ function RegDB() {
           phonenumber: PhoneNumber,
           password: password,
         })
-        .then((response) => response.status)
+        .then((response) => {
+          console.log(response.status);
+        })
         .catch((error) => console.log(error));
     } else if (accType === 'Landlord' || accType === 'Estate agency') {
       axios
@@ -36,9 +38,13 @@ function RegDB() {
           phonenumber: PhoneNumber,
           password: password,
         })
-        .then((response) => response.status)
+        .then((response) => {
+          console.log(response.status);
+        })
         .catch((error) => console.log(error));
     }
+
+    event.preventDefault();
   };
 
   return (

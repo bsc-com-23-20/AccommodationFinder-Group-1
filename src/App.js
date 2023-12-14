@@ -14,17 +14,17 @@ import Leftbar from './components/leftbar/leftbar';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 //import AuthContext from "./components/context/authContext";
-import useContext from "react";
-import BoxInWords from "./components/boxwords/boxinwords";
-import BookingPage from "./pages/bookingPage/bookingPage";
-import LogFun from "./pages/functions/logfun";
-import PostPage from "./pages/postingpage/postPage";
-import PostForm from "./pages/postingpage/postingPage";
-import Footer from "./pages/footer/Footer";
-import ProfilePage from "./pages/profilePage/profilePage";
-import ProfileForm from "./pages/profilePage/ProfileForm";
-import PopupMessage from "./pages/status/mainComponents";
-
+import useContext from 'react';
+import BoxInWords from './components/boxwords/boxinwords';
+import BookingPage from './pages/bookingPage/bookingPage';
+import LogFun from './pages/functions/logfun';
+import PostPage from './pages/postingpage/postPage';
+import PostForm from './pages/postingpage/postingPage2';
+import Footer from './pages/footer/Footer';
+import ProfilePage from './pages/profilePage/profilePage';
+import ProfileForm from './pages/profilePage/ProfileForm';
+import PopupMessage from './pages/status/mainComponents';
+import LogDB from './pages/functions/lofundb';
 
 function App() {
   const currentUser = true;
@@ -66,8 +66,7 @@ function App() {
           path: '/home',
           element: <Home />,
         },
-
-    ]
+      ],
     },
 
     {
@@ -79,30 +78,38 @@ function App() {
       path: '/login',
       element: <Login />,
     },
-
     {
-      path: "/profile/:id",
-      element: <ProfilePage/>,
+      path: '/signin',
+      element: <LogDB />,
+    },
+    {
+      path: '/post',
+      element: <PostForm />,
     },
 
     {
-      path: "/Register",
-      element: <Register/>,
+      path: '/profile/:id',
+      element: <ProfilePage />,
     },
 
     {
-      path: "/profile/:id/editprofile",
-      element: <ProfileForm/>,
+      path: '/Register',
+      element: <Register />,
     },
 
     {
-      path: "/profile/:id/status",
-      element: <PopupMessage/>,
+      path: '/profile/:id/editprofile',
+      element: <ProfileForm />,
     },
 
     {
-      path: "/PostPage",
-      element: <PostPage/>,
+      path: '/profile/:id/status',
+      element: <PopupMessage />,
+    },
+
+    {
+      path: '/PostPage',
+      element: <PostPage />,
     },
   ]);
 
