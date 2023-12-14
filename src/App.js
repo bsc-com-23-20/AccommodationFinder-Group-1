@@ -14,15 +14,6 @@ import Leftbar from "./components/leftbar/leftbar";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 //import AuthContext from "./components/context/authContext";
-<<<<<<< HEAD
-import useContext from 'react';
-import BoxInWords from './components/boxwords/boxinwords';
-import BookingPage from './pages/bookingPage/bookingPage';
-// import Counter from './components/counter/Counter';
-import ViewHostel from './pages/viewHostel/ViewHostel';
-import ConfirmBooking from './pages/confirmBooking/ConfirmBooking';
-import Footer from './pages/footer/Footer';
-=======
 import useContext from "react";
 import BoxInWords from "./components/boxwords/boxinwords";
 import BookingPage from "./pages/bookingPage/bookingPage";
@@ -33,25 +24,13 @@ import Footer from "./pages/footer/Footer";
 import ProfilePage from "./pages/profilePage/profilePage";
 import ProfileForm from "./pages/profilePage/ProfileForm";
 import PopupMessage from "./pages/status/mainComponents";
+import PostHostel from "./pages/postingpage/posthostel";
 
->>>>>>> d0f980737aef3016fdcf6e464a469e72309e0a1d
 
 function App() {
 
   const currentUser = true;
 
-<<<<<<< HEAD
-  const Layout = () => {
-    return (
-      <div>
-        <Navbar2 />
-        <Home />
-        <BoxInWords />
-        {/* <Counter /> */}
-        {/* <ConfirmBooking /> */}
-        {/* <ViewHostel /> */}
-        {/* <div style ={{display: "Flex"}}>
-=======
   const Layout = ()=>{
 
     return(
@@ -60,21 +39,14 @@ function App() {
           <Home/>
           <BoxInWords/>
           {/* <div style ={{display: "Flex"}}>
->>>>>>> d0f980737aef3016fdcf6e464a469e72309e0a1d
           <Leftbar/> 
           <Outlet/>
           <Rightbar/> 
           </div> */}
           <Footer/>
-<<<<<<< HEAD
-      </div>
-    );
-  };
-=======
         </div>
     )
   }
->>>>>>> d0f980737aef3016fdcf6e464a469e72309e0a1d
 
   const ProtectedRoute = ({children}) => {
     
@@ -137,6 +109,10 @@ function App() {
       path: "/PostPage",
       element: <PostPage/>,
     },
+    {
+      path:'/post/hostel',
+      element:<PostHostel/>
+    }
   ])
 
   return (

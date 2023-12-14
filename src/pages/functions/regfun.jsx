@@ -1,25 +1,14 @@
 import React, { useState } from 'react';
 import "./lRG.scss"
 import Selector from "./selector";
-<<<<<<< HEAD
-import axios from 'axios';
-
-=======
 import './logdb.scss'
->>>>>>> d0f980737aef3016fdcf6e464a469e72309e0a1d
 
 function RegDB() {
   const [Email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-<<<<<<< HEAD
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [PhoneNumber, setPhoneNumber] = useState('');
-=======
   const [FirstName, setFirstName] = useState('')
   const [LastName, setLastName] = useState('')
   const [PhoneNumber, setPhoneNumber] = useState('')
->>>>>>> d0f980737aef3016fdcf6e464a469e72309e0a1d
 
   function callApi(){
     
@@ -55,33 +44,6 @@ function RegDB() {
 
 
     return (
-<<<<<<< HEAD
-    <div className='logitems'>
-        <h1>Register</h1>
-        <div>
-        <label>First Name:</label>
-        <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-        </div>
-        <div>
-        <label>Last Name:</label>
-        <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-        </div>
-        <div>
-        <label>PhoneNumber:</label>
-        <input type="text" value={PhoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-        </div>
-        <div>
-        <label>Email:</label>
-        <input type="text" value={Email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <div>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </div>
-        <div>
-          <Selector/>
-        </div>
-=======
     <div className='items'>
           <h1>Register</h1>
         
@@ -105,7 +67,6 @@ function RegDB() {
           <div className='insider'>
             <Selector/>
           </div>
->>>>>>> d0f980737aef3016fdcf6e464a469e72309e0a1d
         <div>
         <button onClick={callApi}>Register</button>
         </div>
