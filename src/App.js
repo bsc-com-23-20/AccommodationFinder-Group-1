@@ -14,19 +14,18 @@ import Leftbar from './components/leftbar/leftbar';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 //import AuthContext from "./components/context/authContext";
-import useContext from 'react';
-import BoxInWords from './components/boxwords/boxinwords';
-import BookingPage from './pages/bookingPage/bookingPage';
-import LogFun from './pages/functions/logfun';
-import PostPage from './pages/postingpage/postPage';
-import PostForm from './pages/postingpage/postingPage2';
-import Footer from './pages/footer/Footer';
-import ProfilePage from './pages/profilePage/profilePage';
-import ProfileForm from './pages/profilePage/ProfileForm';
-import PopupMessage from './pages/status/mainComponents';
-import LogDB from './pages/functions/lofundb';
-import RoomUploadForm from './pages/roomupload/roomUpload';
-import ViewHostel from './pages/viewHostel/ViewHostel';
+import useContext from "react";
+import BoxInWords from "./components/boxwords/boxinwords";
+import BookingPage from "./pages/bookingPage/bookingPage";
+import LogFun from "./pages/functions/logfun";
+import PostPage from "./pages/postingpage/postPage";
+import PostForm from "./pages/postingpage/postingPage";
+import Footer from "./pages/footer/Footer";
+import ProfilePage from "./pages/profilePage/profilePage";
+import ProfileForm from "./pages/profilePage/ProfileForm";
+import PopupMessage from "./pages/status/mainComponents";
+import PostHostel from "./pages/postingpage/posthostel";
+
 
 function App() {
   const currentUser = true;
@@ -121,7 +120,11 @@ function App() {
       path: '/PostPage',
       element: <PostPage />,
     },
-  ]);
+    {
+      path:'/post/hostel',
+      element:<PostHostel/>
+    }
+  ])
 
   return (
     <div className='App'>
