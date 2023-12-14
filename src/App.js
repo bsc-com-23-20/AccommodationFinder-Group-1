@@ -25,6 +25,8 @@ import ProfilePage from './pages/profilePage/profilePage';
 import ProfileForm from './pages/profilePage/ProfileForm';
 import PopupMessage from './pages/status/mainComponents';
 import LogDB from './pages/functions/lofundb';
+import RoomUploadForm from './pages/roomupload/roomUpload';
+import ViewHostel from './pages/viewHostel/ViewHostel';
 
 function App() {
   const currentUser = true;
@@ -81,6 +83,14 @@ function App() {
     {
       path: '/signin',
       element: <LogDB />,
+    },
+    {
+      path: '/roomUpload',
+      element: <RoomUploadForm />,
+    },
+    {
+      path: '/viewHostel',
+      element: <ViewHostel />,
     },
     {
       path: '/post',

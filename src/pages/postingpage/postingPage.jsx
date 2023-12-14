@@ -3,7 +3,7 @@ import axios from 'axios';
 import './postin.scss';
 import url from '../functions/axiosClient';
 
-const PostForm = ({ onPostSubmit }) => {
+const PostForm = () => {
   const [image, setImage] = useState('');
   const [price, setPrice] = useState('');
   const [location, setLocation] = useState('');
@@ -15,19 +15,23 @@ const PostForm = ({ onPostSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    url.post('/api/hostels/add', {
-      name: hostelName,
-      location: selectedLocation,
-      gender: selectedGender,
-      vacantRooms: vacantRoom,
-      file: image,
-    }).then((response) => {
-      if(response.status === 201){
-        alert('Hostel added successfully')
-    }
-  }).catch((err) => {
-    console.log(err);
-  });
+    url
+      .post('/api/hostels/add', {
+        name: hostelName,
+        location: selectedLocation,
+        gender: selectedGender,
+        vacantRooms: vacantRoom,
+        file: image,
+      })
+      .then((response) => {
+        if (response.status === 201) {
+          alert('Hostel added successfully');
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const handleGenderChange = (e) => {
     setSelectedGender(e.target.value);
@@ -37,35 +41,20 @@ const PostForm = ({ onPostSubmit }) => {
     setSelectedLocation(event.target.value);
   };
 
-  const handleImage = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-
-    reader.onloadend = () => {
-      setImage(reader.result);
-    };
-
-    if (file) {
-      reader.readAsDataURL(file);
-    }
+  const handleImage = async (e) => {
+    e.preventDefault()
+    setImage(e.target.files[0]);
   };
-
-  function handleApi() {
-    const formData = new formData();
-    formData.append('Image', Image);
-    axios.post('url', formData).then((res) => {
-      console.log(res);
-    });
-  }
 
   return (
     <form onSubmit={handleSubmit}>
       <div className='file_card'>
+        <h3>Hostel Posting</h3>
         <div className='file_inputs'>
           <input type='file' name='file' onChange={handleImage} />
-          <button onClick={handleApi}>upload Hostel picture</button>
-          <p className='main'>Supported files</p>
-          <p className='info'>JPEG, PNG, JPG and all picture formats</p>
+          
+          {/* <p className='main'>Supported files</p>
+          <p className='info'>JPEG, PNG, JPG and all picture formats</p> */}
         </div>
         <div className='preview'>
           {image && (
@@ -129,11 +118,11 @@ const PostForm = ({ onPostSubmit }) => {
             </select>
           </label>
 
-          <button type='submit'>Submit</button>
+          <input type='submit' value='Submit' />
         </div>
       </div>
     </form>
   );
-}};
+};
 
 export default PostForm;

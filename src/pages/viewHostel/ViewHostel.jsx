@@ -57,6 +57,7 @@ const ViewHostel = () => {
       roomPicture: Room1,
     },
   ]);
+
   return (
     <section className='view-hostel-container'>
       <div className='head-section'>

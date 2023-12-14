@@ -10,7 +10,6 @@ const PostPage = () => {
 
   return (
     <div>
-      <h1>Hostel Postings</h1>
       <PostForm onPostSubmit={handlePostSubmit} />
       <div>
         {posts.map((post, index) => (
