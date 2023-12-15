@@ -71,7 +71,7 @@ body{
     font-weight: 600;
     line-height: normal;
     }
-#viewButton{
+#viewButton, #viewButton:hover{
     width: 100%;
     height: 50%;
     border-radius: 5px;
@@ -81,7 +81,9 @@ body{
     font-weight: 700;
     font-size: 20px;
 }
-
+#viewButton:hover{
+    background: #2997e6;
+}
 #ownerName{
     color: #2C2B2B;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
