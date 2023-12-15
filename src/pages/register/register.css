@@ -1,9 +1,11 @@
 .register{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     position: relative;
-    height: 50rem;
+    width: 90rem;
+    height: 40rem;
     background-color: rgb(222, 240, 249);
     display: flex;
     align-items: center;
@@ -11,8 +13,9 @@
     font-size: 10rem;
 }
 .card{
-    position: relative;
-    width: 60%;
+    position: absolute;
+    top: 2rem;
+    width: 50%;
     border-radius: 1rem;
     background-color: white;
     min-height: 5rem;
@@ -23,11 +26,11 @@
 .register-form{
     /*position: absolute;*/
     flex: 1;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     //display: flex;
     //flex-direction: column;
     //justify-content: center;
-    gap: 1rem;
+    gap: .5rem;
     z-index: 2;
 
 
@@ -40,8 +43,8 @@
 }
 .input-holder{
     position: relative;
-    width: 23rem;
-    height: 5rem;
+    width: 18rem;
+    height: 4.5rem;
     /* border: 1px solid darkred; */
 
 }
@@ -55,7 +58,7 @@
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
     width: 100%;
-    height: 3rem;
+    height: 2rem;
     background: transparent;
     /* z-index: 10; */
     transition: .5s;
@@ -160,20 +163,41 @@
 }
 
 .register-button-container{
-    padding: 0.5rem 2rem;
-    border: none;
+    position: absolute;
+    left: 5rem;
+    bottom: 0.3rem;
+    width: 7.5rem;
+    height: 2.2rem;
+
     //background-color: #443bf1;
     color: #fff;
     cursor: pointer;
     border-radius: 1rem;
-}
-.register-button :hover{
-    background-color: #938eef;
+    /* border: 1px solid #938eef; */
+
+    display: flex;
+justify-content: center;
+align-items: center;
+    }
+.register-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+
+    transition: all 0.3s ease-in-out;
+    }
+.register-button:hover{
+
     color: white;
-    border-radius: 1rem;
+
     transition: all 0.1s ease-in-out;
-    border-bottom: #555 solid;
+    /* border-bottom: #555 solid; */
 }
+
 .select{
     display: flex;
 }
@@ -193,4 +217,20 @@
             flex-direction: column;
         }
     }
-}
+
+    }
+
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+        }
+
+    .register-form {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        }
+
+    .left {
+        background-position: center;
+        }
+    }

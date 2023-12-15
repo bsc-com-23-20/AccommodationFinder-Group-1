@@ -30,7 +30,7 @@ const Register = () => {
         console.log(subjectToRegister);
         try {
             const res = await axios.post(
-                'http://localhost:5000/api/register',
+                'http://localhost:5000/api/students/register',
                 {...subjectToRegister},
                 {headers: {'Content-Type': 'application/json'}},
             );
