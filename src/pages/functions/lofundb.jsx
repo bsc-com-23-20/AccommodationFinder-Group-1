@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './logdb.scss'
 
 function LogDB() {
   const [Email, setEmail] = useState('');
@@ -39,16 +40,17 @@ function LogDB() {
   };
 
   return (
-    <div>
+    <div className ='items'>
       <h1>Login</h1>
-      <div>
-        <label>Email:</label>
-        <input type="text" value={Email} onChange={(e) => setEmail(e.target.value)} />
+      <div className='insider'>
+      <div className='itemholders'>
+        <input type="text" placeHolder='Email' value={Email} onChange={(e) => setEmail(e.target.value)} />
       </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <div className ='itemholders'>
+        <input type="password" placeHolder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
       </div>
+      </div>
+
       <div>
         <button onClick={handleLogin}>Login</button>
       </div>

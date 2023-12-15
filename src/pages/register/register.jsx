@@ -10,11 +10,12 @@ const Register = () => {
             <div className="card">
                 <div className="left">
                     <img src={logo} alt="logo" />
-                    <h1>ACCOFINDER.</h1>
-                    <span>Do you have an account?</span>
+                    <h1>WELCOME TO ACCOFINDER.</h1>
+                    <span>Do you have an account?
                     <Link to = '/login'>
                     <button>Login</button>
                     </Link>
+                    </span>
 
                 </div>
                 <div className="right">

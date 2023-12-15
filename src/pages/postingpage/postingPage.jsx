@@ -1,38 +1,93 @@
 
 import React, { useState } from 'react';
+import ImageUpload from '../../components/upload/imageUpload';
+import DropDownLocation from '../functions/dropdownlocation';
+import axios from 'axios';
 
 const PostForm = ({ onPostSubmit }) => {
-  const [imageUrl, setImageUrl] = useState('');
+  const [image, setImage] = useState('');
   const [price, setPrice] = useState('');
   const [location, setLocation] = useState('');
   const [hostelName, setHostelName] = useState('');
+  const [selectedLocation, setSelectedLocation] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const newPost = {
-      imageUrl,
+      image,
       price,
       location,
       hostelName,
     };
-  
     onPostSubmit(newPost);
   };
+  
+    const handleLocationSelect = (event) => {
+      setSelectedLocation(event.target.value);
+    };
+
+    const handleImage = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+    
+        reader.onloadend = () => {
+          setImage(reader.result);
+        };
+    
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+    };
+
+    function handleApi() {
+        const formData = new formData()
+        formData.append('Image', Image)
+        axios.post('url', formData).then((res) => { 
+            console.log(res)
+        })
+        
+    }
 
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Image URL:
-        <input type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} />
+      <div className='file_card'>
+            <div className="file_inputs">
+                <input type="file" name = "file"  onChange ={handleImage}/>
+                <button onClick = {handleApi}>upload</button>
+                </div>
+                <p className="main">
+                    Supported files
+                </p>
+                <p className="info">
+                   JPEG, PNG, JPG and all picture formats
+                </p>
+        </div>
+        <div className="preview">
+            {image && (
+            <div>
+                <h3>Preview:</h3>
+                <img src={image} alt="Profile Preview" style={{ maxWidth: '300px', maxHeight: '500px' }} />
+            </div>
+            )}
+        </div>
       </label>
       <label>
-        Price:
+        Price Range:
         <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
       </label>
       <label>
-        Location:
-        <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
+        Location:        
+        <select value={selectedLocation} onChange={handleLocationSelect}>
+          <option value="">Select...</option>
+          <option value="Chikanda Urban">Chikanda Urban</option>
+          <option value="Chikanda Rural">Chikanda Rural</option>
+          <option value="Chikanda Matiya">Chikanda Matiya</option>
+          <option value="Ndakhalira">Ndakhalira</option>
+          <option value="Chikanda Phalombe">Chikanda Phalombe</option>
+          <option value="Economics Bridge">Economics Bridge</option>
+        </select>
       </label>
       <label>
         Hostel Name:
@@ -43,31 +98,4 @@ const PostForm = ({ onPostSubmit }) => {
   );
 };
 
-export default PostForm;
-
-const PostPage = () => {
-  const [posts, setPosts] = useState([]);
-
-  const handlePostSubmit = (newPost) => {
-    setPosts([...posts, newPost]);
-  };
-
-  return (
-    <div>
-      <h1>Hostel Postings</h1>
-      <PostForm onPostSubmit={handlePostSubmit} />
-      <div>
-        {posts.map((post, index) => (
-          <div key={index}>
-            <img src={post.imageUrl} alt={`Hostel ${index + 1}`} style={{ maxWidth: '100%' }} />
-            <p>Price: {post.price}</p>
-            <p>Location: {post.location}</p>
-            <p>Hostel Name: {post.hostelName}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default PostPage;
+export default PostForm
