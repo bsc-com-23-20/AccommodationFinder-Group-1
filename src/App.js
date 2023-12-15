@@ -14,18 +14,21 @@ import Leftbar from './components/leftbar/leftbar';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 //import AuthContext from "./components/context/authContext";
-import useContext from "react";
-import BoxInWords from "./components/boxwords/boxinwords";
-import BookingPage from "./pages/bookingPage/bookingPage";
-import LogFun from "./pages/functions/logfun";
-import PostPage from "./pages/postingpage/postPage";
-import PostForm from "./pages/postingpage/postingPage";
-import Footer from "./pages/footer/Footer";
-import ProfilePage from "./pages/profilePage/profilePage";
-import ProfileForm from "./pages/profilePage/ProfileForm";
-import PopupMessage from "./pages/status/mainComponents";
-import PostHostel from "./pages/postingpage/posthostel";
-
+import useContext from 'react';
+import BoxInWords from './components/boxwords/boxinwords';
+import BookingPage from './pages/bookingPage/bookingPage';
+import LogFun from './pages/functions/logfun';
+import PostPage from './pages/postingpage/postPage';
+import PostForm from './pages/postingpage/postingPage';
+import Footer from './pages/footer/Footer';
+import ProfilePage from './pages/profilePage/profilePage';
+import ProfileForm from './pages/profilePage/ProfileForm';
+import PopupMessage from './pages/status/mainComponents';
+import PostHostel from './pages/postingpage/posthostel';
+import ViewHostel from './pages/viewHostel/ViewHostel';
+import ConfirmBooking from './pages/confirmBooking/ConfirmBooking';
+import RoomUploadForm from './pages/roomupload/roomUpload';
+import LogDB from './pages/functions/lofundb';
 
 function App() {
   const currentUser = true;
@@ -87,9 +90,14 @@ function App() {
       path: '/roomUpload',
       element: <RoomUploadForm />,
     },
+
     {
       path: '/viewHostel',
       element: <ViewHostel />,
+    },
+    {
+      path:"/confirmBooking",
+      element: <ConfirmBooking/>
     },
     {
       path: '/post',
@@ -121,10 +129,10 @@ function App() {
       element: <PostPage />,
     },
     {
-      path:'/post/hostel',
-      element:<PostHostel/>
-    }
-  ])
+      path: '/post/hostel',
+      element: <PostHostel />,
+    },
+  ]);
 
   return (
     <div className='App'>

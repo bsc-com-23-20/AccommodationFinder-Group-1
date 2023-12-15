@@ -1,36 +1,37 @@
-#hostelForm{
-    display: inline-block;
-    padding: 2%;
-    width: 40%;
-    margin: 2% 30% 2% 30%;
-    box-shadow: rgba(91, 90, 90, 0.2) 2px 2px 20px;
+.hostelForm {
+  display: inline-block;
+  padding: 2%;
+  width: 100%;
+  transform: scale(1.5);
+  margin: 10% 0% 2% 35%;
+  box-shadow: rgba(91, 90, 90, 0.2) 2px 2px 20px;
 }
-#imageSelector{
-    margin-left: 5%;
+#imageSelector {
+  margin-left: 5%;
 }
-.location{
-    margin-left: 5%;
+.location {
+  margin-left: 5%;
 }
-.hostelDetail{
-    width: 80%;
-    margin: 5% 5%;
-    border-style: none none solid;
+.hostelDetail {
+  width: 80%;
+  margin: 5% 5%;
+  border-style: none none solid;
 }
-.genderLabel{
-    margin-left: 5%;
-    font-size: 13px;
+.genderLabel {
+  margin-left: 5%;
+  font-size: 13px;
 }
-.radio{
-    background-color: rgb(3, 49, 87);
-    align-self: center;
-    margin-top:5%;
-    margin-left: 15%;
-    }
-.postButton{
-    width: 50%;
-    margin-left: 20%;
-    margin-top:5%;
-    background-color: #01394f;
-    color:white;
-    border-radius: 10px;
+.radio {
+  background-color: rgb(3, 49, 87);
+  align-self: center;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+.postButton {
+  width: 50%;
+  margin-left: 20%;
+  margin-top: 5%;
+  background-color: #01394f;
+  color: white;
+  border-radius: 10px;
 }

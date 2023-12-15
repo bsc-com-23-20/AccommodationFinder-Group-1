@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './logdb.scss';
-import { useDispatch } from 'react-redux';
+
 import url from './axiosClient';
 import { Navigate, useNavigate } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ function LogDB() {
   const handleLogin = async (event) => {
     event.preventDefault();
     const csrf = await url.get('/sanctum/csrf-cookie');
-    
+
     const login = await url
       .post('/api/login', {
         email: Email,
@@ -20,7 +20,7 @@ function LogDB() {
       })
       .then((response) => {
         if (response.status === 200) {
-          Navigate('/profile/:id')
+          Navigate('/profile/:id');
         } else {
           alert('not connected');
         }
