@@ -1,0 +1,50 @@
+body{
+    height: 100%;
+}
+#studentDetailsDiv, #studentDetailsDiv:hover{
+    display: grid;
+    grid-template-columns: 20% 70%;
+    height: 7vw;
+    width: 30%;
+    margin: 2% 30% 0% 30%;
+    border-style: none none solid none;
+    border-width: 2px;
+    border-color: rgba(36, 34, 34, 0.4);
+}
+#studentDetailsDiv:hover{
+    transform: scale(1.1);
+}
+#dashboard{
+    border-style: solid;
+    width:fit-content;
+    width: 0%;
+}
+#profilePicDiv{
+    height: 25%;
+}
+#profilePic{
+    height: 80%;
+    object-fit: contain;
+    border-radius: 50%;
+    }
+
+#studentDetails{
+    display: inline-block;
+    height: 20%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+#name{
+    text-transform: capitalize;
+    font-size:xx-large;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+#number{
+    font-size: larger;
+    font-weight: 50;
+    color: rgba(36, 34, 34, 0.7);
+}
+h1{
+    text-align: center;
+}
