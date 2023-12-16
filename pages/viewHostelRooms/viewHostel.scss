@@ -1,0 +1,42 @@
+
+
+.hostel-view {
+    padding: 20px;
+  
+    h2 {
+      color: #333;
+    }
+  
+    .hostel-list {
+      display: flex;
+      flex-wrap: wrap;
+  
+      .hostel-card {
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 10px;
+        width: 300px;
+  
+        h3 {
+          color: #555;
+        }
+  
+        p {
+          margin: 5px 0;
+          color: #777;
+        }
+  
+        .pictures {
+          display: flex;
+          flex-wrap: wrap;
+  
+          img {
+            width: 100%;
+            height: auto;
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+  }
+  

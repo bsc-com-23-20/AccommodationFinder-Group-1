@@ -1,0 +1,142 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    height: 2rem;
+    border: 0.1rem solid lightgray;
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+
+        .icon{
+            color: #555;
+            cursor: pointer;
+
+            &:hover{
+                color: blue;
+            }
+        }
+
+        span{
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(26, 34, 46,);
+            cursor: pointer;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 1rem;
+            border: 0.11rem solid lightgray;
+            padding: 0.7rem;
+
+            input{
+                border: none;
+                width: 50rem;
+            }
+        }
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+
+        .user{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            gap: 0rem;
+            font-weight: 5rem;
+
+            img{
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            
+            span{
+                font-weight: bolder;
+                color: rgb(26, 34, 46,);
+                cursor: pointer;
+                &:hover{
+                    color: blue;
+                }
+            }
+
+            &:hover{
+                color: blue;
+            }
+        }
+
+        .icon{
+            color: #555;
+
+            &:hover{
+                color: blue;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 850px){
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: whitesmoke;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: -100%;
+    opacity: 0;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+    border-radius: 13px;
+}
+
+.navbar.active{
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-left{
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem o;
+}
+.navbar{
+    display: block;
+    cursor: pointer;
+}
+
+.menu-icons i{
+    font-size: 1.2rem;
+    color: green;
+}
+
+}

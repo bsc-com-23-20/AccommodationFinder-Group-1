@@ -1,0 +1,56 @@
+.landlord-dashboard {
+    display: flex;
+  
+    .sidebar {
+      width: 200px;
+      padding: 20px;
+      border: 1px solid #ccc;
+  
+      &.left-sidebar {
+        background-color: #f0f0f0;
+      }
+  
+      &.right-sidebar {
+        background-color: #e0e0e0;
+      }
+  
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+      border: 1px solid #ccc;
+  
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+  
+      .hostel-details {
+        p {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  
