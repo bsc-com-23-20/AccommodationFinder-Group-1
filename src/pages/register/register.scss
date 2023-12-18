@@ -1,4 +1,4 @@
-.login{
+.register{
     height: 100vh;
     background-color: rgb(222, 240, 249);
     display: flex;
@@ -11,6 +11,7 @@
         background-color: white;
         min-height: 500px;
         display: flex;
+        flex-direction: row-reverse;
         overflow: hidden;
 
         .left{
@@ -49,9 +50,9 @@
                 border: none;
                 border-radius: 10px;
             }
-
+            
             button:hover{
-                background-color: #7c76f4;
+                background-color: #938eef;
                 color: white;
                 border-radius: 10px;
                 transition: all 0.1s ease-in-out;
@@ -89,14 +90,17 @@
                     cursor: pointer;
                     border-radius: 10px;
                 }
+                button:hover{
+                    background-color: #938eef;
+                    color: white;
+                    border-radius: 10px;
+                    transition: all 0.1s ease-in-out;
+                    border-bottom: #555 solid;
+                }
 
-            button:hover{
-                background-color: #938eef;
-                color: white;
-                border-radius: 10px;
-                transition: all 0.1s ease-in-out;
-                border-bottom: #555 solid;
-            }
+                .select{
+                    display: flex;
+                }
             }
         }
     }

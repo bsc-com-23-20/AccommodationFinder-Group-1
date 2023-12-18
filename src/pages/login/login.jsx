@@ -1,32 +1,33 @@
 import "./login.scss"
-import { Link } from "react-router-dom"
-import logo from "../../images/accofinder.png"
-import LogDB from "../functions/lofundb";
+import { Link } from "react-router-dom";
+import  LogFun  from "../functions/logfun"
 
 const Login = () => {
-    
     return (
         <div className="login">
             <div className="card">
                 <div className="left">
-                    <img src={logo} alt="logo" />
                     <h1>WELCOME TO ACCOFINDER.</h1>
-                    <span>Don't you have an account?
+                    <p>
+                        whatever the website does will be written here. 
+                        Trust me this is a working website 
+                        and you are going to enjoy it
+                    </p>
+                    <span>Don't you have an account?</span>
                     <Link to = '/register'>
                     <button>Register</button>
                     </Link>
-                    </span>
                     
 
                 </div>
                 <div className="right">
+                    <h1>Login</h1>
                     <form>
-                        <LogDB/>
-                        <span>forgot password?
+                        <LogFun/>
+                        <span>forgot password?</span>
                         <Link to ='./'>
                         click here
                         </Link>
-                        </span>
                     </form>
                 </div>
             </div>
