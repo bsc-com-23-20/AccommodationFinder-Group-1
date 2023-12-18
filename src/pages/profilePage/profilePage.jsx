@@ -4,21 +4,35 @@ import ProfileDisplay from './profileDisplay';
 import './profile.scss';
 import { useNavigate } from 'react-router-dom';
 import url from '../functions/axiosClient';
+import { useDispatch } from 'react-redux';
+import { landlordLogin } from '../../features/loginFeature/landlordLoginSlice';
 
 const ProfilePage = () => {
+  const dispatch = useDispatch();
   const [profileData, setProfileData] = useState({
     image: '',
     phoneNumber: '',
     email: '',
   });
 
-  url.get('/api/landlords/details/get')
-  .then((res)=>{
-    console.log(res.data)
-  }).
-  catch((err)=>{
-    console.log(err)
-  })
+  const { firstname, lastname, email, phonenumber } = url
+
+    .get('/api/landlords/details/get')
+    .then((res) => {
+      const landlordData = res.data;
+      const { landlord } = landlordData;
+      console.log(landlord[0]);
+      //console.log(JSON.stringify(landlordData));
+      dispatch(landlordLogin(landlordData));
+      console.log('Inside GET request of ProfilePage component');
+      // console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+  //Dispatch landlordLogin action and feed it with fetched landlord login data
+
   const navigate = useNavigate();
 
   const handleButtonClick = () => {

@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import loginSlice from '../loginFeature/loginSlice';
+import landlordLoginSlice from '../loginFeature/landlordLoginSlice';
 import postNewRoomSlice from '../postNewRoom/postNewRoomSlice';
 
 const store = configureStore({
   reducer: {
-    login: loginSlice,
+    landLogin: landlordLoginSlice,
     uploadRoom: postNewRoomSlice,
   },
 });

@@ -2,15 +2,15 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = [{ name: 'john', email: 'johnbanda@gmail.com' }];
 
-const loginSlice = createSlice({
+const landlordLoginSlice = createSlice({
   name: 'login',
   initialState,
   reducers: {
-    login: (state, action) => {
+    landlordLogin: (state, action) => {
       state.push(action.payload);
     },
   },
 });
 
-export const { login } = loginSlice.actions;
-export default loginSlice.reducer;
+export const { landlordLogin } = landlordLoginSlice.actions;
+export default landlordLoginSlice.reducer;
