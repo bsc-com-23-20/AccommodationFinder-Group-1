@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './landlord.scss'
 
 const Landlord = () => {
 
@@ -58,11 +59,15 @@ const Landlord = () => {
 
   return (
     <div className="landlord-dashboard">
-      <div className="sidebar left-sidebar">
-        <h3>Number of Tenants</h3>
-        <p>{numberOfTenants}</p>
-      </div>
 
+        <div className="sidebar right-sidebar">
+        <h3>Hostels</h3>
+        <ul>
+          {postedHostels.map((hostel) => (
+            <li key={hostel.id}>{hostel.name}</li>
+          ))}
+        </ul>
+        </div>
       <div className="main-content">
         <h3>Name: {hostelDetails.name}</h3>
         <p>Total Rooms: {hostelDetails.totalRooms}</p>
@@ -70,14 +75,11 @@ const Landlord = () => {
         <p>Pending Bookings: {hostelDetails.pendingBookings}</p>
       </div>
 
-      <div className="sidebar right-sidebar">
-        <h3>Hostels</h3>
-        <ul>
-          {postedHostels.map((hostel) => (
-            <li key={hostel.id}>{hostel.name}</li>
-          ))}
-        </ul>
+      <div className="sidebar left-sidebar">
+        <h3>Number of Tenants</h3>
+        <p>{numberOfTenants}</p>
       </div>
+
     </div>
   );
 };

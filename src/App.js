@@ -29,6 +29,7 @@ import ViewHostel from './pages/viewHostel/ViewHostel';
 import ConfirmBooking from './pages/confirmBooking/ConfirmBooking';
 import RoomUploadForm from './pages/roomupload/roomUpload';
 import LogDB from './pages/functions/lofundb';
+import Landlord from './pages/landlord/landlord';
 
 function App() {
   const currentUser = true;
@@ -90,14 +91,18 @@ function App() {
       path: '/roomUpload',
       element: <RoomUploadForm />,
     },
+    {
+      path: '/landlord/dashboard',
+      element: <Landlord />,
+    },
 
     {
       path: '/viewHostel',
       element: <ViewHostel />,
     },
     {
-      path:"/confirmBooking",
-      element: <ConfirmBooking/>
+      path: '/confirmBooking',
+      element: <ConfirmBooking />,
     },
     {
       path: '/post',

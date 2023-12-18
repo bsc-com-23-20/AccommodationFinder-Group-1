@@ -4,7 +4,7 @@ const initialState = [{ name: 'john', email: 'johnbanda@gmail.com' }];
 
 const loginSlice = createSlice({
   name: 'login',
-  initialState: {},
+  initialState,
   reducers: {
     login: (state, action) => {
       state.push(action.payload);
