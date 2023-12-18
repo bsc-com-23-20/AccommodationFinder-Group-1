@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-# AccommodationFinder-Group-1
+
+#AccommodationFinder-Group-1
 =======
 # Getting Started with Create React App
 

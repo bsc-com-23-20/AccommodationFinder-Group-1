@@ -1,0 +1,236 @@
+.register{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    width: 90rem;
+    height: 40rem;
+    background-color: rgb(222, 240, 249);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+}
+.card{
+    position: absolute;
+    top: 2rem;
+    width: 50%;
+    border-radius: 1rem;
+    background-color: white;
+    min-height: 5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+.register-form{
+    /*position: absolute;*/
+    flex: 1;
+    /* padding: 0.5rem; */
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    gap: .5rem;
+    z-index: 2;
+
+
+}
+.register-form .register-heading-1{
+    margin-left: 5rem;
+    color: #4A4848;
+    font-size: 2rem;
+
+}
+.input-holder{
+    position: relative;
+    width: 18rem;
+    height: 4.5rem;
+    /* border: 1px solid darkred; */
+
+}
+.input-holder .input{
+    position: absolute;
+    bottom: 0;
+    outline: none;
+    /* border: 5px solid #dede17; */
+    box-shadow: none;
+    /* padding: .5rem 1rem 1rem; */
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 2rem;
+    background: transparent;
+    /* z-index: 10; */
+    transition: .5s;
+
+}
+
+
+
+.right .input-holder input:valid + .input-holder span, .right .input-holder input:focus + .input-holder span{
+    //transform: translateY(-10px);
+    font-size: 1.5rem;
+    color: #4A4848;
+    transition: 0.5s;
+    //border: 1px solid green;
+}
+.input-holder i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.8rem;
+    font-size: 1.5rem;
+    color: #4A4848;
+    background-color: #fff;
+    border-radius: 0.4rem;
+   overflow: hidden;
+    transition: .5s;
+   pointer-events: none;
+}
+
+.right{
+    position: relative;
+    flex: 1;
+    /* padding: 0.5rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    justify-content: center;
+
+}
+.right .register-button{
+   background-color: #014372;
+}
+.right h1{
+    color: #555;
+}
+.right input{
+    /* border: none; */
+    /* border-bottom: 0.1rem solid lightgray; */
+}
+
+.left{
+    flex: 1;
+    background: linear-gradient(rgba(26, 34, 46, 0.5), rgba(39, 25, 46, 0.5)), url("../../images/boy.jpeg") center;
+    background-size: cover;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: white;
+    align-items: center;
+}
+.left  img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+.left  h1{
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.left  h2{
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.left  p{
+    font-weight: bold;
+}
+.left  span{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left   button{
+    padding: 0.5rem 2rem;
+    //bottom: none;
+    background-color: #fff;
+    color: rgb(26, 34, 46, 1);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+}
+.left button:hover{
+    background-color: #938eef;
+    color: white;
+    border-radius: 1rem;
+    transition: all 0.1s ease-in-out;
+    border-bottom: #555 solid;
+}
+
+.register-button-container{
+    position: absolute;
+    left: 5rem;
+    bottom: 0.3rem;
+    width: 7.5rem;
+    height: 2.2rem;
+
+    //background-color: #443bf1;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 1rem;
+    /* border: 1px solid #938eef; */
+
+    display: flex;
+justify-content: center;
+align-items: center;
+    }
+.register-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+
+    transition: all 0.3s ease-in-out;
+    }
+.register-button:hover{
+
+    color: white;
+
+    transition: all 0.1s ease-in-out;
+    /* border-bottom: #555 solid; */
+}
+
+.select{
+    display: flex;
+}
+
+@media screen and (max-width: 850px) {
+
+    .register{
+        height: 80rem;
+
+        .card{
+            width: 50%;
+            color:black;
+            border-radius: 1rem;
+            background-color: white;
+            min-height: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    }
+
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+        }
+
+    .register-form {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        }
+
+    .left {
+        background-position: center;
+        }
+    }
