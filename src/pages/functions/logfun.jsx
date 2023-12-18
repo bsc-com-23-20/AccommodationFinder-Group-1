@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
 
 const LogFun = () => {
-  const [Email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isRegistered, setIsRegistered] = useState(false);
   const [message, setMessage] = useState('');
@@ -16,7 +15,7 @@ const LogFun = () => {
 
   const handleRegister = () => {
 
-    localStorage.setItem('registeredUser', Email);
+    localStorage.setItem('registeredUser', username);
     setIsRegistered(true);
     setMessage('Registration successful. You can now log in.');
   };
@@ -24,7 +23,7 @@ const LogFun = () => {
   const handleLogin = () => {
 
     const registeredUser = localStorage.getItem('registeredUser');
-    if (registeredUser && registeredUser === Email) {
+    if (registeredUser && registeredUser === username) {
       setMessage('Login successful!');
     } else {
       setMessage('Invalid credentials. Please try again.');
@@ -33,29 +32,31 @@ const LogFun = () => {
 
   return (
     <div className="LogFun">
-        <h1>{isRegistered ? 'Login' : 'Register'}</h1>
-        <div>
-          <label>Email:</label>
-          <input
-            type="text"
-            value={Email}
-            onChange={(e) => setEmail(e.target.value)} />
-        </div>
-
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)} />
-        </div>
-        {isRegistered ? (
-          <button  type='submit' onClick={handleLogin}>Login</button>
-        ) : (
-          <button onClick={handleRegister}>Register</button>
-        )}
-        <p>{message}</p>
+      <h1>{isRegistered ? 'Login' : 'Register'}</h1>
+      <div>
+        <label>Username:</label>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
       </div>
+      
+      <div>
+        <label>Password:</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      {isRegistered ? (
+        <button onClick={handleLogin}>Login</button>
+      ) : (
+        <button onClick={handleRegister}>Register</button>
+      )}
+      <p>{message}</p>
+    </div>
   );
 };
 

@@ -1,0 +1,52 @@
+$primary-color: #007bff;
+$secondary-color: #28a745;
+
+.hostel-booking {
+  text-align: center;
+
+  h2 {
+    color: $primary-color;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .room-details {
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .screenshot-upload {
+    margin-top: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      display: none;
+    }
+
+    button {
+      background-color: $secondary-color;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+    }
+  }
+}
+

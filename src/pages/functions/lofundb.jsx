@@ -1,70 +1,59 @@
 import React, { useState } from 'react';
-import './logdb.scss';
-
-import url from './axiosClient';
-import { Navigate, useNavigate } from 'react-router-dom';
 
 function LogDB() {
-  const [Email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const Navigate = useNavigate();
 
-  const handleLogin = async (event) => {
-    event.preventDefault();
-    const csrf = await url.get('/sanctum/csrf-cookie');
-
-    const login = await url
-      .post('/api/login', {
-        email: Email,
-        password: password,
-      })
-      .then((response) => {
-        if (response.status === 200) {
-          Navigate('/profile/:id');
-        } else {
-          alert('not connected');
-        }
-      })
-      .catch((error) => {
-        console.log(error);
+  const handleRegister = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'LogDBlication/json',
+        },
+        body: JSON.stringify({ username, password }),
       });
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'LogDBlication/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
-    <form
-      id='form'
-      autoComplete='true'
-      className='items'
-      onSubmit={handleLogin}
-    >
-      <h1>Login</h1>
-      <div className='insider'>
-        <div className='itemholders'>
-          <input
-            id='email'
-            name='email'
-            type='text'
-            placeHolder='Email'
-            value={Email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className='itemholders'>
-          <input
-            id='password'
-            name='password'
-            type='password'
-            placeHolder='Password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-      </div>
-
+    <div>
+      <h1>Login/Register Page</h1>
       <div>
-        <input className='input' value='LOGIN' type='submit' />
+        <label>Username:</label>
+        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
       </div>
-    </form>
+      <div>
+        <label>Password:</label>
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      </div>
+      <div>
+        <button onClick={handleRegister}>Register</button>
+        <button onClick={handleLogin}>Login</button>
+      </div>
+    </div>
   );
 }
 
