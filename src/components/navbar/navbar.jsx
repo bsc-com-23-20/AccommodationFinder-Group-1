@@ -7,29 +7,21 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PersornOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import profileicon  from "../../images/user.png";
-import AFlogo  from "../../images/accofinder.png";
 
 const Navbar = () => {
     return (
         <div className = "navbar">
             <div className="left">
-            <img src={AFlogo} alt="logo" />
-                <HomeOutlinedIcon className="icon"/>
-                {/* <GridViewOutlinedIcon/> */}
+                <span>ACCOFINDER</span>
+                <HomeOutlinedIcon/>
             
             <div className="search">
                 <SearchOutlinedIcon/>
                 <input type="text" placeholder="search..." />
             </div>
+            <div className='logout'>
+                <button>logout</button>
             </div>
-            <div className="right">
-                <PersornOutlinedIcon className="icon"/>
-                <EmailOutlinedIcon className="icon"/>
-                <NotificationsOutlinedIcon className="icon"/>
-                <div className="user">
-                   <img src={profileicon} alt="profile pic" />
-                    <span>Kondwa K-sli</span>
-                </div>
             </div>
         </div>
     )

@@ -1,0 +1,53 @@
+.hostel-booking {
+  text-align: center;
+
+  h2 {
+    color: rgb(26, 34, 46);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .room-details {
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 20px solid #5555;
+      }
+    }
+  }
+
+  .screenshot-upload {
+    margin-top: 20px;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 1em;
+    }
+  }
+
+  button {
+    background-color: rgb(1, 105, 146);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+
+    &:hover{
+      background-color: goldenrod;
+    }
+  }
+}
+
